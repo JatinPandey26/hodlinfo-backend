@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const TickerSchema = mongoose.Schema({
-  symbol: {
+  name: {
     type: String,
     required: true,
   },
-  lastPrice: {
+  last: {
     type: String,
     required: true,
   },
@@ -13,15 +13,15 @@ const TickerSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  bidPrice: {
+  buy: {
     type: String,
     required: true,
   },
-  askPrice: {
+  sell: {
     type: String,
     required: true,
   },
-  baseAsset: {
+  base_unit: {
     type: String,
     required: true,
   },

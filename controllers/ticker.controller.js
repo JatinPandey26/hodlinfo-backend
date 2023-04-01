@@ -2,9 +2,10 @@ import { Ticker } from "../models/ticker.model.js";
 
 export const createTicker = async (req, res, next) => {
   try {
-    const { data } = req.body;
-    for (let i = 0; i < data.length; i++) {
-      await Ticker.create(data[i]);
+    const { arr } = req.body;
+
+    for (let i = 0; i < arr.length; i++) {
+      await Ticker.create(arr[i]);
     }
 
     res.status(200).send("tickers created successfully");
